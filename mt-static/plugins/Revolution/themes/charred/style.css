@@ -1,0 +1,637 @@
+/* 
+Theme Name: Revolution Charred
+Theme URL: http://www.revolutiontwo.com/themes/charred
+Description: Charred is a 2-column Widget-ready theme created for WordPress.
+Author: Jason Schuller
+Author URI: http://www.jdidit.com
+Version: 2.0
+Tags: two columns, fixed width, black, white, gray, sidebar widgets
+
+The CSS, XHTML and design is released under GPL:
+http://www.opensource.org/licenses/gpl-license.php
+
+Changelog:
+v2.0 - 11.01.08
+Second Release of Revolution Charred
+*/
+
+* {
+margin:0;
+padding:0;
+}
+
+html,body {
+background:#FFF url(images/bg.jpg) top repeat;
+color:#BDAFA8;
+text-align:center;
+}
+
+body {
+font:12px arial,helvetica,verdana,sans-serif;
+}
+
+h1 {
+font-size:22px;
+}
+
+h2 {
+font-size:16px;
+font-weight:400;
+color:#FFFFFF;
+}
+
+h3 {
+font-size:16px;
+font-weight:400;
+color:#FFFFFF;
+margin-bottom:5px;
+}
+
+h4 {
+font-size:14px;
+}
+
+h5 {
+font-size:10px;
+color:#BDAFA8;
+padding-left:1px;
+font-weight:400;
+margin-bottom:5px;
+}
+
+h5 a:link, h5 a:visited{
+color:#BDAFA8;
+}
+
+h5 a:hover{
+color:#BDAFA8;
+}
+
+a {
+color:#FFFFFF;
+text-decoration:none;
+}
+
+#wrapper {
+text-align:left;
+width:800px;
+padding-left:10px;
+padding-right:10px;
+margin:0 auto;
+}
+
+#subHead {
+width:800px;
+height:25px;
+margin:auto;
+}
+
+#headCats {
+float:left;
+margin-top:4px;
+font-size:12px;
+color:#FFFFFF;
+}
+
+#headPages{
+float:right;
+padding-top:4px;
+color:#FFFFFF;
+}
+
+#headPages ul li{
+list-style:none;
+display:inline;
+margin-left:10px;
+}
+
+#headCats ul li{
+list-style:none;
+display:inline;
+margin-right:10px;
+}
+
+#subHead a {
+font-size:12px;
+color:#FFFFFF;
+}
+
+#endHead {
+width:800px;
+height:90px;
+margin:5px auto auto;
+}
+
+#logoBlock {
+float:left;
+margin-top:8px;
+}
+
+#featuredBlock {
+float:right;
+margin-top:10px;
+}
+
+#featuredBlock img {
+border:1px solid #3B3B3B;
+margin:1px;
+}
+
+#logoBlock img {
+border:none;
+}
+
+#mastHead {
+background:url(images/mhbg.jpg) top repeat-x;
+margin-top:0;
+}
+
+.tagCloud {
+list-style:none;
+font:100%/160% Georgia, "Times New Roman", Times, serif;
+font-weight:400;
+margin:0;
+}
+
+.tagCloud a {
+text-decoration:none;
+margin:0 .5em 0 0;
+}
+
+.tagCloud a:hover {
+text-decoration:none;
+color:#BDAFA8;
+}
+
+#mainCol {
+float:left;
+width:464px;
+overflow:hidden;
+margin:10px 0 0;
+}
+
+#sidebar {
+color:#BDAFA8;
+float:left;
+width:300px;
+line-height:1.3em;
+margin:10px 0 0 33px;
+}
+
+#sideBlock {
+background:#000000;
+margin-bottom:10px;
+padding:10px;
+}
+
+#sideBlock img {
+margin-top:10px;
+border:none;
+margin-left:1px;
+}
+
+#sideSearch {
+background:#000000;
+margin-bottom:10px;
+padding:4px;
+}
+
+#searchWrap #s {
+background:#000000;
+color:#BDAFA8;
+font-size:1.1em;
+border:none;
+margin-right:3px;
+width:265px;
+padding:1px 2px;
+}
+
+#introIMG {
+float:left;
+margin:6px 8px 0px 0px;
+overflow:hidden;
+}
+
+#introSide {
+float:left;
+margin:0px 6px 0px 0px;
+}
+
+#introIMG a {
+text-decoration:none;
+}
+
+#introIMG img {
+background:#000000;
+border:none;
+width:140px;
+height:140px;
+padding:6px;
+}
+
+#introSide img {
+background:#000000;
+border:none;
+width:60px;
+height:60px;
+margin:2px 0 0 0;
+}
+
+#sideBlog {
+margin:0px 0px 8px 0px;
+height:65px;
+}
+
+.rss_links ul li {
+background:url(images/rss.gif) no-repeat 0 3px;
+color:#BDAFA8;
+border-top:1px solid #3B3B3B;
+line-height:1.2em;
+padding:3px 0 4px 16px;
+}
+
+.user_links ul li {
+background:url(images/user.gif) no-repeat 0 3px;
+color:#BDAFA8;
+border-top:1px solid #3B3B3B;
+line-height:1.2em;
+padding:3px 0 4px 16px;
+}
+
+#postMain {
+height:212px;
+overflow:hidden;
+margin-bottom:15px;
+}
+
+#mainEntry a {
+color:#BDAFA8;
+}
+
+#mainEntry a:hover {
+color:#FFFFFF;
+}
+
+#singleEntry a {
+color:#FFFFFF;
+border-bottom: 1px dotted #FFFFFF;
+}
+
+#singleEntry a:hover {
+color:#BDAFA8;
+border-bottom: 1px dotted #FFFFFF;
+}
+
+.postMeta {
+background:url(images/line.gif) no-repeat left center;
+font-size:11px;
+text-align:right;
+margin-bottom:5px;
+}
+
+.postMeta span.date {
+color:#FFFFFF;
+padding:0 2px 0 4px;
+}
+
+.postMeta span.comments {
+background:url(images/user.gif) no-repeat left center;
+padding-left:15px;
+margin-left:2px;
+color:#FFFFFF;
+}
+
+.postMeta span.comments a,.postMeta span.date a {
+color:#BDAFA8;
+}
+
+.post {
+margin:0 0 10px;
+}
+
+.post h2 {
+line-height:1em;
+}
+
+.post h2 a {
+width:100%;
+outline:none;
+font-size:16px;
+font-weight:400;
+}
+
+.post .entry {
+line-height:1.4em;
+overflow:hidden;
+}
+
+.post .entry p {
+margin:5px 0;
+}
+
+.entry blockquote {
+margin:0 1.3em;
+}
+
+.entry ul {
+list-style:none;
+margin:0 1.3em;
+}
+
+.entry li a {
+color:#333;
+font-weight:700;
+background:url(images/dot.gif) repeat-x bottom left;
+}
+
+.entry ol {
+margin:0 1em 0 3em;
+}
+
+.entry ol li {
+margin:0 0 7px;
+}
+
+.entry img {
+border:none;
+}
+
+.entry table tr {
+padding:15px 0;
+}
+
+#more_reading {
+color:#BDAFA8;
+font-size:11px;
+text-transform:uppercase;
+margin-bottom:40px;
+text-align:right;
+}
+
+#more_reading a img {
+border:none;
+margin:0 0 3px 2px;
+}
+
+#comments {
+width:435px;
+padding:12px 0 0;
+}
+
+#comments h3,h3#respond {
+color:#FFFFFF;
+margin-bottom:7px;
+}
+
+#comments h3 a,h3#respond a{
+color:#FFFFFF;
+margin-bottom:7px;
+}
+
+#comments h3 a:hover,h3#respond a:hover{
+color:#BDAFA8;
+margin-bottom:7px;
+}
+
+ol.commentslist {
+list-style:none;
+margin:5px 0 12px;
+}
+
+.commentslist li {
+background: #000000 top left;
+margin-bottom:7px;
+padding:7px 0;
+}
+
+.commentslist li.alt {
+background: #000000 top left;
+}
+
+.commentslist li:hover {
+border-color:#888;
+}
+
+.commentslist .comment_text {
+line-height:1.4em;
+overflow:hidden;
+margin:0 7px;
+}
+
+.comment_text ul,.comment_text ol,.comment_text blockquote {
+margin:0 1em;
+}
+
+p.author_meta {
+font-weight:700;
+margin:0 0 0 7px;
+text-transform:uppercase;
+color:#FFFFFF;
+}
+
+p.post_meta {
+font-size:11px;
+text-align:right;
+margin:0 7px 0 0;
+}
+
+.commentslist li.author {
+background:#000000;
+color:#BDAFA8;
+}
+
+.commentslist li.author a {
+color:#DDD;
+}
+
+#comments_closed {
+background:#333;
+color:#FFFFFF;
+margin-top:12px;
+line-height:1.5em;
+padding:7px 0;
+}
+
+p.nocomments {
+margin:0 12px 0 7px;
+}
+
+p.nocomments a {
+color:#ddd;
+font-weight:700;
+text-decoration:underline;
+}
+
+ol.pingslist {
+font-size:12px;
+margin:1.5em 2em;
+}
+
+.pingslist li {
+color:#BDAFA8;
+margin:0 0 7px;
+}
+
+#author,#email,#url,#comment {
+font:1.1em arial,helvetica,verdana,sans-serif;
+padding:2px;
+background: #000000 top left;
+border:none;
+color:#FFFFFF;
+}
+
+#comment {
+width:458px;
+overflow:auto;
+}
+
+#commentform p small {
+font-size:10px;
+color:#FFFFFF;
+}
+
+.commentslist code {
+background:transparent;
+}
+
+#footer {
+color:#BDAFA8;
+padding-top:10px;
+padding-bottom:60px;
+width:800px;
+margin:auto;
+background:url(images/line.gif) top left repeat-x;
+}
+
+#footer a {
+font-weight:normal;
+color:#FFFFFF;
+border-bottom: 1px dotted #FFFFFF;
+}
+
+#footer a:hover {
+font-weight:normal;
+color:#BDAFA8;
+}
+
+.floatleft {
+float:left;
+margin:3px 7px 0 0;
+}
+
+.floatright {
+float:right;
+margin:3px 0 0 7px;
+}
+
+.right {
+float:right;
+}
+
+.left {
+float:left;
+}
+
+.clear {
+clear:both;
+}
+
+.fix:after {
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+.fix {
+display:block;
+}
+
+* html .fix {
+height:1%;
+}
+
+a:hover,#subHead a:hover {
+color:#BDAFA8;
+}
+
+#sidebar p,#tertCol p {
+color:#BDAFA8;
+}
+
+#searchWrap,#searchWrap input,#more_reading p,#more_reading img {
+vertical-align:middle;
+}
+
+.middle_links,.rss_links,.user_links {
+margin-bottom:20px;
+}
+
+.middle_links h3,#elseWhere h3,.rss_links h3,.user_links h3 {
+margin-bottom:5px;
+}
+
+#sidebar ul,#tertCol ul {
+list-style:none;
+margin:8px 0 4px;
+}
+
+.entry h3,.comment_text p,.comment_text ul,.comment_text ol,.comment_text blockquote,#commentform p {
+margin:1em 0;
+}
+
+.commentslist li a,.pingslist li a,#commentform p a {
+font-weight:700;
+background:url(images/dot.gif) repeat-x bottom left;
+}
+
+.commentslist li.author a:hover,p.nocomments a:hover {
+color:#FFF;
+}
+
+/* Tips */
+.tool-tip {
+color: #BDAFA8;
+width: 150px;
+z-index: 13000;
+}
+
+.tool-title {
+font-weight: normal;
+font-size: 12px;
+margin: 0;
+color: #FFFFFF;
+padding:8px 8px 0 8px;
+background:#000000;
+text-align: left;
+}
+
+.tool-text {
+font-size: 11px;
+padding:0 8px 8px 8px;
+background:#000000;
+text-align: left;	
+}
+
+#none a, #none a:hover {
+border:none;
+}
+
+span.navback{
+width:25px;
+height:15px;
+display:block;
+float:right;
+background:url(images/previous.gif) top right no-repeat;
+cursor:pointer;
+}
+
+span.navforward{
+width:25px;
+height:15px;
+display:block;
+float:right;
+background:url(images/next.gif) top right no-repeat;
+cursor:pointer;
+}

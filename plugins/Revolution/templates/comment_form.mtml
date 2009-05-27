@@ -1,0 +1,42 @@
+<mt:IfCommentsAccepted>
+<div id="comment-greeting"></div>
+<form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="commentform" onsubmit="return mtCommentOnSubmit(this)">
+    <input type="hidden" name="static" value="1" />
+    <input type="hidden" name="entry_id" value="<$mt:EntryID$>" />
+    <input type="hidden" name="__lang" value="<$mt:BlogLanguage$>" />
+    <input type="hidden" name="parent_id" value="<$mt:CommentParentID$>" id="comment-parent-id" />
+    <input type="hidden" name="armor" value="1" />
+    <input type="hidden" name="preview" value="" />
+    <input type="hidden" name="sid" value="" />
+    <p id="comment-form-reply"<mt:IfCommentParent><mt:Else> style="display:none"</mt:IfCommentParent>>
+        <input type="checkbox" id="comment-reply" name="comment_reply" value="<$mt:CommentParentID$>"<mt:IfCommentParent> checked="checked"</mt:IfCommentParent> onclick="mtSetCommentParentID()" />
+        <label for="comment-reply" id="comment-reply-label"><mt:IfCommentParent>Replying to comment from <mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent></mt:IfCommentParent></label>
+    </p>
+    <p id="comment-form-name">
+        <input id="author" name="author" size="22" tabindex="1" value="<mt:If name="comment_preview"><$mt:CommentAuthor encode_html="1"$></mt:If>" onfocus="mtCommentFormOnFocus()" />
+        <label for="author"><small>Name (required)</small></label>
+    </p>
+    <p id="comment-form-email">
+        <input id="email" name="email" size="22" tabindex="2" value="<mt:If name="comment_preview"><$mt:CommentEmail encode_html="1"$></mt:If>" onfocus="mtCommentFormOnFocus()" />
+        <label for="email"><small>Mail (required)</small></label>
+    </p>
+    <p id="comment-form-url">
+        <input id="url" name="url" size="22" tabindex="3" value="<mt:If name="comment_preview"><$mt:CommentURL encode_html="1"$></mt:If>" onfocus="mtCommentFormOnFocus()" />
+        <label for="url"><small>Website</small></label>
+    </p>
+    <p id="comments-open-text">
+       <textarea id="comment" name="text" rows="10" cols="60" tabindex="4" onfocus="mtCommentFormOnFocus()"><mt:If name="comment_preview"><$mt:CommentBody autolink="0" sanitize="0" convert_breaks="0" encode_html="1"$></mt:If></textarea>
+       <mt:IfAllowCommentHTML>(You may use HTML tags for style)</mt:IfAllowCommentHTML></label>
+    </p>
+    <div id="comments-open-captcha"></div>
+    <p id="comments-open-footer">
+        <input name="submit" type="image" src="<mt:StaticWebPath>plugins/Revolution/themes/charred/images/submit.gif" alt="Submit" id="submit" tabindex="5" value="Submit" />
+    </p>
+</form>
+<script type="text/javascript">
+<!--
+mtAttachEvent("load", mtEntryOnLoad);
+mtAttachEvent("unload", mtEntryOnUnload);
+//-->
+</script>
+</mt:IfCommentsAccepted>

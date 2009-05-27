@@ -1,0 +1,92 @@
+id: Charred
+key: Charred
+name: 'Revolution'
+description: 'An adaptation of the Revolution Theme for Movable Type.'
+version: 0.1
+template_sets:
+  Charred:
+    base_path: templates
+    label: 'Revolution - Charred'
+    templates:
+      index:
+        feed_recent:
+          label: 'Feed - Recent Entries'
+          outfile: atom.xml
+          rebuild_me: 1
+        javascript:
+          label: JavaScript
+          outfile: mt.js
+          rebuild_me: 1
+        main_index:
+          label: 'Main Index'
+          outfile: index.html
+          rebuild_me: 1
+        rsd:
+          label: RSD
+          outfile: rsd.xml
+          rebuild_me: 1
+        styles:
+          label: Stylesheet
+          outfile: styles.css
+          rebuild_me: 1
+      individual:
+        entry:
+          label: Entry
+          mappings:
+            individual:
+              archive_type: Individual
+              file_template: %y/%m/%-f
+              preferred: 1
+      module:
+        banner_footer:
+          label: 'Banner Footer'
+        banner_header:
+          label: 'Banner Header'
+        comment_form:
+          label: 'Comment Form'
+        comments:
+          label: Comments
+        entry_summary:
+          label: 'Entry Summary'
+        html_head:
+          label: 'HTML Head'
+        mast_head:
+          label: 'Mast Head'
+        navigation:
+          label: Navigation
+        sidebar:
+          label: Sidebar
+        trackbacks:
+          label: Trackbacks
+      system:
+        comment_preview:
+          label: 'Comment Preview'
+        comment_response:
+          label: 'Comment Response'
+        dynamic_error:
+          label: 'Dynamic Error'
+        popup_image:
+          label: 'Popup Image'
+        search_results:
+          label: 'Search Results'
+      widget:
+        comment_and_socialize:
+          label: 'Comment and Socialize'
+        featured_articles:
+          label: 'Featured Articles'
+        side_search:
+          label: 'Side Search'
+        subscribe:
+          label: Subscribe
+        tag_cloud:
+          label: 'Tag Cloud'
+      widgetset:
+        sidebar:
+          label: Sidebar
+          order: 1000
+          widgets:
+            - 'Side Search'
+            - 'Tag Cloud'
+            - 'Featured Articles'
+            - Subscribe
+            - 'Comment and Socialize'

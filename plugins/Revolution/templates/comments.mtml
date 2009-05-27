@@ -1,0 +1,56 @@
+            <div id="comments_wrapper">
+                <!-- You can start editing here. -->
+
+                <div id="comments" class="section">
+                    <h3>
+                        <$mt:EntryCommentCount singular="One Comment" plural="# Comments"$>, 
+                        <mt:IfCommentsActive><a href="#respond" title="Leave a comment">Comment</a></mt:IfCommentsActive>
+                        <mt:IfPingsActive>or <a href="<mt:EntryTrackBackLink>" rel="trackback">Ping</a></mt:IfPingsActive>
+                    </h3>
+                </div> 
+                
+<mt:IfCommentsActive>
+                <mt:If name="comment_preview">
+                <$mt:Include module="Comment Form"$>
+                </mt:If>
+                <ol class="commentslist">
+                    <mt:Comments>
+                    <li class="author item" id="comment-<mt:CommentID>">
+                        <div class="fix">
+                            <div class="author_meta">
+                                <p class="author_meta">
+                                    <span class="user"><$mt:CommentAuthorIdentity$></span>
+                                    <mt:IfCommentParent>
+                                    <span class="vcard author"><$mt:CommentAuthorLink$></span> replied to <a href="<mt:CommentParent><$mt:CommentLink$></mt:CommentParent>">comment from <mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent></a>
+                                    <mt:Else>
+                                    <span class="vcard author"><$mt:CommentAuthorLink$></span>
+                                    </mt:IfCommentParent>
+                                    
+                                </p>
+                            </div>
+                            <div class="comment_text">
+                                <$mt:CommentBody$>
+                            </div>
+                            <p class="post_meta">
+                                <a href="#comment-<mt:CommentID>" title="Comment Permalink"><mt:CommentDate format="%b %e, %Y"></a>
+                                <mt:Unless name="comment_preview">
+                                    <mt:IfCommentsAccepted>
+                                    | <$mt:CommentReplyToLink$>
+                                    </mt:IfCommentsAccepted>
+                                </mt:Unless>
+                            </p>
+                        </div>
+                    </li>
+                    </mt:Comments>
+                </ol>
+</mt:IfCommentsActive>
+
+                <ol class="pingslist">
+                </ol>
+
+                <mt:Unless name="comment_preview">
+                <h3 id="respond">Reply to &#8220;<mt:EntryTitle encode_html="1">&#8221;</h3>
+                <mt:Include module="Comment Form">
+                </mt:Unless>
+                
+            </div><!-- end comments_wrapper -->

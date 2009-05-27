@@ -1,0 +1,11 @@
+                <div id="sideBlock">
+                    <h3>Featured Articles</h3>
+<mt:Entries tags="@featured">
+                    <div id="sideBlog">
+                      <mt:SetVarBlock name="asset_img"><mt:EntryAssets lastn="1"><img src="<mt:AssetThumbnailURL square="1" width="60">" alt="<mt:AssetLabel>" /></mt:EntryAssets></mt:SetVarBlock>
+                      <mt:if name="asset_img"><div id="introSide"><a href="<mt:EntryPermalink>" class="Tips2" title="Read More :: Click here to read the rest of this entry."><mt:var name="asset_img"></a></div></mt:if>
+                      <a href="<mt:EntryPermalink>"><mt:EntryTitle></a>
+                      <p><mt:EntryExcerpt words="15"></p>
+                    </div>
+</mt:Entries>
+                </div>

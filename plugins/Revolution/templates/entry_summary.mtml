@@ -1,0 +1,14 @@
+                <div id="postMain">
+                  <div class="post" id="post-<mt:EntryID>">
+          			<div class="postMeta"><span class="date"><mt:EntryCreatedDate format="%b %e, %Y"></span><span class="comments"><a href="<mt:EntryPermalink>#comments" title="Comment on <$mt:EntryTitle encode_html="1"$>"><mt:EntryCommentCount></a></span></div>
+          			<h2><a href="<mt:EntryPermalink>" title="<mt:EntryTitle encode_html="1">"><mt:EntryTitle></a></h2>
+                    <mt:EntryIfTagged>
+                    <h5>Tags: <mt:EntryTags glue=', '><a href="<$mt:TagSearchLink encode_html="1"$>" rel="tag"><mt:TagName></a></mt:EntryTags></h5>
+                    </mt:EntryIfTagged>
+          			<div id="mainEntry" class="entry">
+                      <mt:SetVarBlock name="asset_img"><mt:EntryAssets lastn="1"><img src="<mt:AssetThumbnailURL square="1" width="140">" alt="<mt:AssetLabel>" /></mt:EntryAssets></mt:SetVarBlock>
+                      <mt:if name="asset_img"><div id="introIMG"><a href="<mt:EntryPermalink>" class="Tips2" title="Read More :: Click here to read the rest of this entry."><mt:var name="asset_img"></a></div></mt:if>
+            		  <a href="<mt:EntryPermalink>" class="Tips2" title="Read More :: Click here to read the rest of this entry."><p><mt:EntryBody remove_html="1"></p><mt:if tag="EntryMore"><p class="serif">Read the rest of this entry &raquo;</p></mt:if></a>
+          			</div>
+          		  </div>
+                </div>

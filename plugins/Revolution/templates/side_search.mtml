@@ -1,0 +1,14 @@
+                <div id="sideSearch">
+                    <div id="searchWrap">
+                        <form method="get" id="searchForm" action="<mt:SearchScript>">
+<mt:If name="search_results">
+            <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>" />
+<mt:Else>
+            <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>" />
+</mt:If>
+                        <input type="text" value="<$mt:SearchString$>" name="s" id="s" /><input id="searchsubmit" type="image" src="<mt:StaticWebPath>plugins/Revolution/themes/charred/images/search.gif" alt="Submit" />
+                        <input type="hidden" name="limit" value="<$mt:SearchMaxResults$>" />
+
+                        </form>
+                    </div>
+                </div>
