@@ -1,21 +1,45 @@
 id: Charred
-key: Charred
 name: 'Revolution'
 description: 'An adaptation of the Revolution Theme for Movable Type.'
 version: 0.1
+
 template_sets:
   Charred:
-    base_path: templates
+    base_path: templates/charred
     label: 'Revolution - Charred'
     templates:
+      widget:
+        comment_and_socialize:
+          label: 'Comment and Socialize'
+        featured_articles:
+          label: 'Featured Articles'
+        side_search:
+          label: 'Side Search'
+        subscribe:
+          label: 'Subscribe'
+        tag_cloud:
+          label: 'Tag Cloud'
+      widgetset:
+        gen_sidebar:
+          label: 'Simple Sidebar'
+          widgets:
+            - 'Side Search'
+            - 'Tag Cloud'
+            - 'Featured Articles'
+            - 'Subscribe'
+            - 'Comment and Socialize'
       index:
         feed_recent:
-          label: 'Feed - Recent Entries'
+          label: 'Feed (Comments)'
           outfile: atom.xml
+          rebuild_me: 1
+        feed_comments:
+          label: 'Feed (Entries)'
+          outfile: comments.xml
           rebuild_me: 1
         javascript:
           label: JavaScript
-          outfile: mt.js
+          outfile: javascript.js
           rebuild_me: 1
         main_index:
           label: 'Main Index'
@@ -29,6 +53,7 @@ template_sets:
           label: Stylesheet
           outfile: styles.css
           rebuild_me: 1
+          custom_css: 1
       individual:
         entry:
           label: Entry
@@ -45,7 +70,7 @@ template_sets:
         comment_form:
           label: 'Comment Form'
         comments:
-          label: Comments
+          label: 'Comments'
         entry_summary:
           label: 'Entry Summary'
         html_head:
@@ -53,11 +78,11 @@ template_sets:
         mast_head:
           label: 'Mast Head'
         navigation:
-          label: Navigation
+          label: 'Navigation'
         sidebar:
-          label: Sidebar
+          label: 'Sidebar'
         trackbacks:
-          label: Trackbacks
+          label: 'Trackbacks'
       system:
         comment_preview:
           label: 'Comment Preview'
@@ -69,24 +94,4 @@ template_sets:
           label: 'Popup Image'
         search_results:
           label: 'Search Results'
-      widget:
-        comment_and_socialize:
-          label: 'Comment and Socialize'
-        featured_articles:
-          label: 'Featured Articles'
-        side_search:
-          label: 'Side Search'
-        subscribe:
-          label: Subscribe
-        tag_cloud:
-          label: 'Tag Cloud'
-      widgetset:
-        sidebar:
-          label: Sidebar
-          order: 1000
-          widgets:
-            - 'Side Search'
-            - 'Tag Cloud'
-            - 'Featured Articles'
-            - Subscribe
-            - 'Comment and Socialize'
+

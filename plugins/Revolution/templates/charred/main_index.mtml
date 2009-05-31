@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<link rel="start" href="<$mt:BlogURL$>" title="Home" />
+<mt:Include module="HTML Head">
+<title><mt:BlogName></title>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<mt:Link template="rsd">" />
+</head>
+<body>
+    <mt:Include module="Mast Head">
+    <mt:Include module="Banner Header">
+    <div id="wrapper">
+        <a name="top"></a>
+        <div id="mid" class="fix">
+            <div id="mainCol" class="fix">
+                <a name="main"></a>
+                <mt:Entries lastn="5">
+                    <mt:Include module="Entry Summary">
+                </mt:Entries>
+                <div id="more_reading"></div>
+            </div>
+            <div id="sidebar">
+                <mt:WidgetSet name="Simple Sidebar">
+            </div>
+        </div>
+        <mt:Include module="Banner Footer">
+    </div>
+</body>
+</html>

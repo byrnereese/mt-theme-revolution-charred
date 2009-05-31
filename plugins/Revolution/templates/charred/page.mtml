@@ -18,22 +18,22 @@
                 <a name="main"></a>
 <!-- BEGIN entry -->
                 <div class="post" id="post-<mt:EntryID>">
-        			<div class="postMeta"><span class="date"><mt:EntryCreatedDate format="%b %e, %Y"></span><span class="comments"><mt:EntryCommentCount></span></div>
-                    <h2><a href="<mt:EntryPermalink>" title="<mt:EntryTitle encode_html="1">"><mt:EntryTitle></a></h2>
-                    <mt:EntryIfTagged>
+                    <h2><mt:EntryTitle></h2>
+<mt:ignore>
+                   &nbsp;<mt:EntryIfTagged>
                     <h5>Tags: <mt:EntryTags glue=', '><a href="<$mt:TagSearchLink encode_html="1"$>" rel="tag"><mt:TagName></a></mt:EntryTags></h5>
                     </mt:EntryIfTagged>
+</mt:ignore>
                     <div id="singleEntry" class="entry">
                         <mt:EntryBody>
                         <mt:If tag="EntryMore"><mt:EntryMore></mt:If>
                     </div>
                 </div>
 
-                <mt:Include module="Comments">
 <!-- END entry -->
             </div>
             <div id="sidebar">
-                <mt:WidgetSet name="Sidebar">
+                <mt:WidgetSet name="Simple Sidebar">
             </div>
         </div>
         <mt:Include module="Banner Footer">
