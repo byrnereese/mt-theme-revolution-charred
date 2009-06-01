@@ -38,7 +38,7 @@ template_sets:
           outfile: comments.xml
           rebuild_me: 1
         javascript:
-          label: JavaScript
+          label: 'JavaScript'
           outfile: javascript.js
           rebuild_me: 1
         main_index:
@@ -46,21 +46,28 @@ template_sets:
           outfile: index.html
           rebuild_me: 1
         rsd:
-          label: RSD
+          label: 'RSD'
           outfile: rsd.xml
           rebuild_me: 1
         styles:
-          label: Stylesheet
+          label: 'Stylesheet'
           outfile: styles.css
           rebuild_me: 1
           custom_css: 1
       individual:
         entry:
-          label: Entry
+          label: 'Entry'
           mappings:
             individual:
               archive_type: Individual
               file_template: %y/%m/%-f
+              preferred: 1
+        page:
+          label: 'Page'
+          mappings:
+            page:
+              archive_type: Page
+              file_template: %-c/%-f
               preferred: 1
       module:
         banner_footer:
